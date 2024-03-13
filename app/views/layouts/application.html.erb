@@ -29,6 +29,11 @@
       </ul>
     </nav>
     <main>
+      <% flash.each do |message_type, message| %>
+        <div class = "flash-massage <%= message_type %>">
+          <%= message %>
+        </div>
+      <% end %>
       <%= yield %>
     </main>
 
